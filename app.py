@@ -11,6 +11,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def home():
+    return {"message": "Snake Detection API Running"}
 
 @app.get("/health")
 def health():
